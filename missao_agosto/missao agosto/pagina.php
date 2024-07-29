@@ -29,8 +29,8 @@
             ?>
             </main>
             <td>
-            <a href="alteracao.php"><button>altera ou excluir</button></a>
-        
+            <a href="alteracao.php"><button>altera </button></a>
+            <a><button>excluir</button></a>
             </td>
         </tbody>
     </table>
