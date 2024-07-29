@@ -18,9 +18,24 @@
                 <td></td>
             </tr>
         </thead>
-        <tbody id="corpoDaTable"></tbody>
+        <tbody>
+            <main>
+                <?php 
+        
+                $n = $_GET["nome"];
+                $g = $_GET["genero"];
+                $h = $_GET["historia"];        
+                echo"<td> $n </td> <td> $g </td> <td> $h </td> " ;
+            ?>
+            </main>
+            <td>
+            <a href="alteracao.php"><button>altera ou excluir</button></a>
+        
+            </td>
+        </tbody>
     </table>
-
+<a href="index.html"><button>escrever outra historia</button></a>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></Script>
 </body>
