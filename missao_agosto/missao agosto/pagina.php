@@ -22,10 +22,10 @@
             <main>
                 <?php 
         
-                $n = $_GET["nome"];
+                $ndh = $_GET["nome_da_historia"];
                 $g = $_GET["genero"];
                 $h = $_GET["historia"];        
-                echo"<td> $n </td> <td> $g </td> <td> $h </td> " ;
+                echo"<td> $ndh </td> <td> $g </td> <td> $h </td> " ;
             ?>
             </main>
             <td>

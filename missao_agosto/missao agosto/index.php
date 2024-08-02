@@ -12,29 +12,29 @@
         <h4>seu melhor editor de historia</h4>
     </div>
     <section>
-        <form class="row g-3" novalidate action="pagina.php" method="get">
+    <form action="pagina.php" method="get" >
+        <div class="col-md-4">
             <div>
-                    <div class="col-md-4">
-                        <label for="nome" class="form-label" id="nomeDaHistoria">
-                        Digite o nome da historia</label>
-                        <input type="text" class="form-control"  name="nome" id="nome" required>
-                    </div>
-                    <div>
-                        <label for="">Digite o genero</label>
-                        <select name="genero" id="genero" class="form-select" aria-label="Default select" required>
-                            <option value=""></option>
-                            <option value="Ação">Ação</option>
-                            <option value="Comedia">Comedia</option>
-                            <option value="Romance">Romance</option>
-                            <option value="Terro">Terro</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Ficção">Ficção</option>
-                        </select>
-                    </div>
-                <div class="mb-3">
-                    <label  class="form-label" > Comece a digitar a sua historia</label>
-                    <textarea class="form-control"  name="historia" rows="4" id="historia"  required></textarea>
-                </div>
+                <label for="validationCustom01" class="form-label">Digite o nome da historia</label>
+                <input type="text" require class="form-control" id="validationCustom01"  aria-describedby="emailHelp" name="nome_da_historia" required>
+            </div>
+            <div>
+                <label for="">Digite o genero</label>
+                <select name="genero"  class="form-select" aria-label="Default select" id="genero" required>
+                        <option value=""></option>
+                        <option value="Ação">Ação</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Terro">Terro</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Ficção">Ficção</option>
+                    </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"> Comece a digitar a sua historia</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="historia" required></textarea>
+        </div>
                     <a href="pagina.php"><button onclick="confirmar(); return false" class="btn btn-success form-control">confirmar</button> </a>
             </div>        
         </form> 
