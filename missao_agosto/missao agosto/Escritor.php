@@ -13,6 +13,7 @@
     
     
     <section>
+        <h1>Escreva</h1>
     <form action="pasta_para_conectar/Acao_conect.php" method="POST" >
         <div class="col-md-4">
             <div>

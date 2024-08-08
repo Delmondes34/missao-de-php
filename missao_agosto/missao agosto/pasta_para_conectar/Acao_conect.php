@@ -8,7 +8,7 @@ if(isset($_POST['novaHist'])){
     $genero = mysqli_escape_string($conectar, $_POST['genero']);
     $historia = mysqli_escape_string($conectar, $_POST['historia']);
 
-    $sql = "INSERT INTO historia(nome_da_historia, genero, historia) VALUES ('$nomDaHis','$genero','$historia') ";
+    $sql = "INSERT INTO historias(nome_da_historia, genero, historia) VALUES ('$nomDaHis','$genero','$historia') ";
 
     if(mysqli_query($conectar , $sql)){
         header('Location: index.php?sucesso');
