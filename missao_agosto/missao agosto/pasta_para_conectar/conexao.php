@@ -13,6 +13,4 @@
     else{
         echo "xeromium";
     }
-
-    
 ?>
