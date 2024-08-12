@@ -14,10 +14,9 @@ if(isset($_POST['atualHist'])){
 
     if(mysqli_query($conectar , $sql)){
         echo "sucesso";
-        header('Location: ../pasta_para_conectar/index.php?sucesso');
+        header('Location: ../index.php?sucesso');
     }else{
         header('Location: index.php?erro');
     }
-
 }
 ?>

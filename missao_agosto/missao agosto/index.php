@@ -12,11 +12,12 @@
 </head>
 <body>
     <div>
-        <h1>Bem vindo a Escrivaninha</h1>
-        <h4>Seu melhor editor de historia</h4>
+        <h1>Bem vindo ao POST</h1>
+        <h4>Seu melhor expositor de historias</h4>
     </div>
     <h4> Aqui esta alguma de nossas historias</h4>
     <table class="table table-hover table-bordered">
+
         <thead>
             <tr >
                 <td>Nome da historia</td>
@@ -41,20 +42,21 @@
                     </svg></a>
 
                     <a >
-                        <button href="Deletar.php?id=<?php echo $dados['id'];?>" class="btn btn-danger" href='#' >
+                        <button href=".php?id=<?php echo $dados['id'];?>" class="btn btn-danger" href='#' >
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                             <path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0'/>
                             </svg> 
                         </button>
                     </a>
+                    <div class="modal-header"></div>
                 </td>
             </tr>
             <?php endwhile; ?>    
         </tbody>
     </table>
-    <p>escreva as suas historias ao clicar nesse botão nesse botão</p>
+    <p>escreva as descrições das novas historias ao clicar nesse botão nesse botão</p>
     
-    <a href="Escritor.php" class="form-label"><button>escrever outra historia</button></a>
+    <a href="Escritor.php" class="form-label"><button>coloque a descrição da sua historia</button></a>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -11,9 +11,9 @@ if(isset($_POST['novaHist'])){
     $sql = "INSERT INTO historias(nome_da_historia, genero, historia) VALUES ('$nomDaHis','$genero','$historia') ";
 
     if(mysqli_query($conectar , $sql)){
-        header('Location: index.php?sucesso');
+        header('Location: ../index.php?sucesso');
     }else{
-        header('Location: index.php?erro');
+        header('Location: ../index.php?erro');
     }
 
 }

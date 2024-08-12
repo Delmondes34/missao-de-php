@@ -50,9 +50,8 @@
             <label for="historia" class="form-label"> Comece a digitar a Sinopse</label>
             <textarea class="form-control" id="historia" rows="4" name="historia" value="<?php echo $dados['historia'];?>"required><?php echo $dados['historia'];?></textarea>
         </div>  
-                <Button type="submit" name="atualHist">Atualizar</Button>
-                    <a href="index.php">confirmar</a>
-            </div>        
+            <Button type="submit" name="atualHist" herf="index.php">Atualizar</Button>
+        </div>        
         </form> 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></Script>

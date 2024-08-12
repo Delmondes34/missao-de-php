@@ -37,8 +37,7 @@
             <label for="historia" class="form-label"> Comece a digitar a sua historia</label>
             <textarea class="form-control" id="historia" rows="4" name="historia" required></textarea>
         </div>  
-                <Button type="submit" name="novaHist"></Button>
-                    <a href="index.php">confirmar</a>
+                <Button type="submit" name="novaHist" href="index.php">confirmar</Button>
             </div>        
         </form> 
     </script>
