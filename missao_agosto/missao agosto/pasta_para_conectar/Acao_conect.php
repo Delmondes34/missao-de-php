@@ -15,6 +15,5 @@ if(isset($_POST['novaHist'])){
     }else{
         header('Location: ../index.php?erro');
     }
-
 }
 ?>

@@ -37,6 +37,7 @@
                 <label for="genero">Digite o genero</label>
                 <select name="genero"  class="form-select" aria-label="Default select" id="genero" value="<?php echo $dados['genero'];?>" required>
                         <option value=""><?php echo $dados['genero'];?></option>
+                        <option value="Aventura">Aventura</option>
                         <option value="Ação">Ação</option>
                         <option value="Comedia">Comedia</option>
                         <option value="Romance">Romance</option>
@@ -50,10 +51,13 @@
             <label for="historia" class="form-label"> Comece a digitar a Sinopse</label>
             <textarea class="form-control" id="historia" rows="4" name="historia" value="<?php echo $dados['historia'];?>"required><?php echo $dados['historia'];?></textarea>
         </div>  
-            <Button type="submit" name="atualHist" herf="index.php">Atualizar</Button>
+            <Button type="submit" name="atualHist" herf="index.php" class="btn btn-primary">Atualizar</Button>
         </div>        
-        </form> 
-    </script>
+        </form>
+        <br>
+        <a href="index.php">
+            <button  class="btn btn-dark">voltar </button>
+        </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></Script>
 </body>
 </html>

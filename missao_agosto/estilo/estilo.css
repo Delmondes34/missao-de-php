@@ -1,4 +1,60 @@
-.body{
+body{
+    align-items: center;
+    text-align: center;
+    background: no-repeat;
+    background-image: linear-gradient(#324001,#F2BE5C);
+}
+.botaNova{
+    height: 50px;
+    width: 189%;
+}
+.local{
+    height: 80px;
+    width: 300%;
     align-items: center;
     text-align: center;
 }
+.estilo{
+    align-items: center;
+    text-align: center;
+}
+
+.escrita{
+    width: 98%;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    align-content: center;
+    font-size: 100px;
+    color: black;
+}
+
+.caixa{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 810px; 
+
+}
+.loacl{
+
+    align-items: center;
+    justify-content: center;
+    border: 1px solid ;
+    text-align: center;
+    height: 360px;
+    width: 300px;
+    background-image: linear-gradient(#515c27,#ce9a39);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0); 
+
+}
+
+
