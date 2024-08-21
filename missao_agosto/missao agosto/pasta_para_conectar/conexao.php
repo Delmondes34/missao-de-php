@@ -1,5 +1,6 @@
 <?php 
 
+    //codigo para chamar o banco
     $localDeAcesso = "localhost";
     $bancoDeDados="crud";
     $usuario = "root";
