@@ -17,43 +17,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../estilo/estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <link href="pasta_para_conectar/conexão.php">
     <link href="pasta_para_conectar/Acao_conect.php">
 </head>
 <body>
+<link href="../estilo/estilo.css">
     
-    
-    <section>
-        <h1>Escreva</h1>
-    <form action="pasta_para_conectar/Atualizar.php" method="POST" >
-        <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
-        <div class="col-md-4">
-            <div>
-                <label for="nome_da_historia" class="form-label">Digite o nome da historia</label>
-                <input type="text" require class="form-control" id="nome_da_historia"  aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
-            </div>
-            <div>
-                <label for="genero">Digite o genero</label>
-                <select name="genero"  class="form-select" aria-label="Default select" id="genero" value="<?php echo $dados['genero'];?>" required>
-                        <option value=""><?php echo $dados['genero'];?></option>
-                        <option value="Ação">Ação</option>
-                        <option value="Comedia">Comedia</option>
-                        <option value="Romance">Romance</option>
-                        <option value="Terro">Terro</option>
-                        <option value="Drama">Drama</option>
-                        <option value="Ficção">Ficção</option>
-                    </select>
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="historia" class="form-label"> Comece a digitar a Sinopse</label>
-            <textarea class="form-control" id="historia" rows="4" name="historia" value="<?php echo $dados['historia'];?>"required><?php echo $dados['historia'];?></textarea>
-        </div>  
-            <Button type="submit" name="atualHist" herf="index.php">Atualizar</Button>
-        </div>        
-        </form> 
-    </script>
+    <div class="universal">
+        <section class="usniversal">
+       
+            
+        <form action="pasta_para_conectar/Atualizar.php" method="POST" >
+        <div class="caixa">    
+            <div class="conteudoCaixa">
+                <div class="local">    
+                    <h1>Escreva</h1>
+                    <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
+                </div>
+                <div class="col-md-4">
+                    <div class="local">
+                        <label for="nome_da_historia" class="form-label">Digite o nome da historia</label>
+                        <input type="text" require class="form-control" id="nome_da_historia"  aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
+                    </div>
+                    <div class="local">
+                        <label for="genero">Digite o genero</label>
+                        <select name="genero"  class="form-select" aria-label="Default select" id="genero" value="<?php echo $dados['genero'];?>" required>
+                                <option value=""><?php echo $dados['genero'];?></option>
+                                <option value="Aventura">Aventura</option>
+                                <option value="Ação">Ação</option>
+                                <option value="Comedia">Comedia</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Terro">Terro</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Ficção">Ficção</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="local">
+                    <label for="historia" class="form-label"> Comece a digitar a Sinopse</label>
+                    <textarea class="form-control" id="historia" rows="4" name="historia" value="<?php echo $dados['historia'];?>"required><?php echo $dados['historia'];?></textarea>
+                </div>  
+                    <Button type="submit" name="atualHist" herf="index.php" class="btn btn-primary">Atualizar</Button>
+                </div>        
+                </form>
+                <br>
+                <a href="index.php">
+                    <button  class="btn btn-dark">voltar </button>
+                </a>
+    </div>        
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></Script>
 </body>
 </html>
