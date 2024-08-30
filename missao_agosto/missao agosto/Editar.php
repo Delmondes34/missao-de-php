@@ -1,16 +1,12 @@
 <?php 
     include_once 'pasta_para_conectar/Atualizar.php';
 
-    
-    
-
     if(isset($_GET['id'])){
         $id = mysqli_escape_string($conectar, $_GET['id']);
         $sql ="SELECT * From historias WHERE id = '$id'";
         $result = mysqli_query($conectar , $sql);
         $dados = mysqli_fetch_array($result);
     }
-
     if(isset($_GET['id'])){
         $id2 = mysqli_escape_string($conectar, $_GET['id']);
         $nomef = mysqli_escape_string($conectar, $_GET['nomef']);
@@ -18,9 +14,12 @@
         $resul2 = mysqli_query($conectar , $sql);
         $gener = mysqli_fetch_array($result);
     }  
-
+    foreach($dados as $gener){
+        if($dados == $gener){
+            return $dados;
+        }
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -55,7 +54,7 @@
                     <div class="local">
                         <label for="genero">Digite o genero</label>
                         <select name="generos"  class="form-select" aria-label="Default select" id="generos" value="<?php echo $dados['genero'];?>" required>
-                            <?php   
+                            <?php   echo "<option value=''></option>";
                                 
                                 
                              ?>
