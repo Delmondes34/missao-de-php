@@ -10,13 +10,20 @@ if(isset($_POST['atualHist'])){
 
     $id = mysqli_escape_string($conectar, $_POST['id']);
 
+    $nomeTab = mysqli_escape_string($conectar, $_GET['nomef']);   
+    
     $sql = "UPDATE historias SET nome_da_historia = '$nomDaHis', genero = '$genero', historia = '$historia' WHERE id = '$id' ";
+    
+    $sql2="SELECT * FROM generos";
 
-    if(mysqli_query($conectar , $sql)){
+    if(mysqli_query($conectar , $sql , $sql2)){
         echo "sucesso";
         header('Location: ../index.php?sucesso');
     }else{
         header('Location: index.php?erro');
     }
+    
 }
+
+
 ?>
