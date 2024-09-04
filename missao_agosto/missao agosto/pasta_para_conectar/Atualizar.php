@@ -12,10 +12,9 @@ if(isset($_POST['atualHist'])){
     
     $sql = "UPDATE historias SET nome_da_historia = '$nomDaHis', genero = '$genero', historia = '$historia' WHERE id = '$id' ";
     
-    $sql2="SELECT * FROM generos ";
     
     
-    if(mysqli_query($conectar , $sql , $sql2)){
+    if(mysqli_query($conectar , $sql)){
         echo "sucesso";
         header('Location: ../index.php?sucesso');
     }else{

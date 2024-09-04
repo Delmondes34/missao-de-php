@@ -42,13 +42,14 @@
                     <div class="local">
                         <label for="genero">Digite o genero</label>
                         <select name="generos"  class="form-select" aria-label="Default select" id="generos" value="<?php echo $dados['genero'];?>" required>
-                            <option value="<?php echo $dados['id'];?>"><?php echo $dados['genero'];?></option>
+                            <option value="<?php echo $dados["$generos->id"];?>"><?php echo $dados['genero'];?></option>
                             <?php
-                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
-                                while($genero = mysqli_fetch_object($consultar)):
 
-                                    echo"<option value='$genero->id'> $genero->nomef</option>";    
-                                    endwhile                             
+                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
+                                while($generos = mysqli_fetch_object($consultar)):      
+                                    echo"<option value='$generos->id'> $generos->nomef</option>";
+                                endwhile
+                                                          
                              ?>
                             </select>
                     </div>
