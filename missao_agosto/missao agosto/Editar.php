@@ -30,24 +30,25 @@
         <form action="pasta_para_conectar/Atualizar.php" method="POST" >
         <div class="caixa">    
             <div class="conteudoCaixa">
-                <div class="local">    
+                <div >    
                     <h1>Escreva</h1>
                     <input type="hidden" name="id" id="nome" value="<?php echo $dados['id'];?>">
                 </div>
                 <div class="col-md-4">
-                    <div class="local">
+                    <div class="localNome">
                         <label for="nome_da_historia" class="form-label">Digite o nome da historia</label>
-                        <input type="text" require class="form-control" id="nome_da_historia"  aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
+                        <input type="text" 0class="form-control" id="nome_da_historia"  aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
                     </div>
                     <div class="local">
                         <label for="genero">Digite o genero</label>
-                        <select name="generos"  class="form-select" aria-label="Default select" id="generos" value="<?php echo $dados['genero'];?>" required>
-                            <option value="<?php echo $dados["$generos->id"];?>"><?php echo $dados['genero'];?></option>
+                        <select name="id_generos"  class="form-select" aria-label="Default select" id="id_generos" value="<?php echo $dados['genero'];?>" required>
+                            
                             <?php
 
                                 $consultar=mysqli_query($conectar, "Select * FROM generos ");
-                                while($generos = mysqli_fetch_object($consultar)):      
-                                    echo"<option value='$generos->id'> $generos->nomef</option>";
+                                while($generos = mysqli_fetch_object($consultar)):
+                                        
+                                    echo"<option value='$generos->id_generos'> $generos->genero</option>";
                                 endwhile
                                                           
                              ?>
