@@ -37,22 +37,27 @@
                 <div class="col-md-4">
                     <div class="localNome">
                         <label for="nome_da_historia" class="form-label">Digite o nome da historia</label>
-                        <input type="text" 0class="form-control" id="nome_da_historia"  aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
+                        <input type="text" class="form-control" id="nome_da_historia" aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
                     </div>
                     <div class="local">
                         <label for="genero">Digite o genero</label>
-                        <select name="id_genero"  class="form-select" aria-label="Default select" id="id_genero" value="<?php echo $dados['genero'];?>" required>
-                            
+                        <select name="id_genero" class="form-select" aria-label="Default select" id="id_genero" required>              
                             <?php
+                                $consultar = mysqli_query($conectar, "Select * FROM generos");
 
-                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
-                                while($generos = mysqli_fetch_object($consultar)):
-                                        
-                                    echo"<option value='$generos->id_generos'> $generos->genero</option>";
-                                endwhile
-                                                          
+                                while ($generos = mysqli_fetch_object($consultar)) :
+                                    if ($generos->id_generos == $dados['id_genero']) {
+                                        $isSelected = true;
+                                    }
+
+                                    echo"<option 
+                                        value='$generos->id_generos' 
+                                        selected=$isSelected>
+                                            $generos->genero
+                                        </option>";
+                                endwhile                                                        
                              ?>
-                            </select>
+                        </select>
                     </div>
                 </div>
                 <div class="local">

@@ -1,13 +1,5 @@
 <?php
-    include_once 'pasta_para_conectar/Acao_conect.php';
     Include 'pasta_para_conectar/conexao.php';
-
-    if(isset($_GET['id'])){
-        $id = mysqli_escape_string($conectar, $_GET['id']);
-        $sql ="SELECT * From historias WHERE id = '$id'";
-        $result = mysqli_query($conectar , $sql);
-        $dados = mysqli_fetch_array($result);
-    }
  ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -43,18 +35,16 @@
             <tbody >
                 <tr>
                     <?php 
-                        $sql = 'SELECT * FROM historias';
+                        $sql = 'SELECT historias.id, historias.nome_da_historia, generos.genero, historias.historia from historias INNER JOIN generos ON historias.id_genero=generos.id_genero ';
                         $result = mysqli_query($conectar , $sql);
-                        while($dados = mysqli_fetch_array($result)):
-                            
+                        while($dados = mysqli_fetch_array($result)):                            
                     ?>
                     <td><?php echo $dados['nome_da_historia'];?></td>
-                    <td><?php echo $dados['genero']?>
-                        <?php 
+                    <td><?php echo $dados['genero'];
                         /*$consultar=mysqli_query($conectar, "Select * FROM generos ");
                         $generos = mysqli_fetch_object($consultar);      
                             if($generos->id_genero == $dados['id_genero']){
-                                echo $generos['genero'];
+                                echo $dados['id_genero']->genero;
                             }*/
                         ?></td>
                     <td><?php echo $dados['historia'];?></td>

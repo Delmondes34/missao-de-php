@@ -15,4 +15,12 @@ if(isset($_GET['deletar'])){
         header('Location: ../index.php?erro');
     }
 }
+
+/* 
+    $consultar=mysqli_query($conectar, "Select * FROM generos ");
+    $generos = mysqli_fetch_object($consultar);      
+    if($generos->id_genero == $dados['id_genero']){
+   echo $generos->generos;
+    }
+*/
 ?>
