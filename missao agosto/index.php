@@ -40,13 +40,7 @@
                         while($dados = mysqli_fetch_array($result)):                            
                     ?>
                     <td><?php echo $dados['nome_da_historia'];?></td>
-                    <td><?php echo $dados['genero'];
-                        /*$consultar=mysqli_query($conectar, "Select * FROM generos ");
-                        $generos = mysqli_fetch_object($consultar);      
-                            if($generos->id_genero == $dados['id_genero']){
-                                echo $dados['id_genero']->genero;
-                            }*/
-                        ?></td>
+                    <td><?php echo $dados['genero'];?></td>
                     <td><?php echo $dados['historia'];?></td>
                     <td>
                     <a href="Editar.php?id=<?php echo $dados['id'];?>" class="btn btn-primary" href='#'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
