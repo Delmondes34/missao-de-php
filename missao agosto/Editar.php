@@ -42,25 +42,19 @@
                     <div class="local">
                         <label for="genero">Digite o genero</label>
                         <select name="id_genero" class="form-select" aria-label="Default select" id="id_genero" required>    
-                                 
                             <?php
                                 $consultar = mysqli_query($conectar, "Select * FROM generos");
                                 echo"<option value='0' selected></option>";
                                 while ($generos = mysqli_fetch_object($consultar)) :
-                                    if ($generos->id_generos == $dados['id_genero']) {
-                                        $isSelected = true;
-                                        echo"<option value='$generos->id_generos'selected=$isSelected> $generos->genero</option>";
-                                    }
-                                                                 
-                                    echo"<option value = '$generos->id_generos'> $generos->genero</option>";
+                                    $isSelected = $generos->id_genero == $dados['id_genero'] ? "selected" : "";                     
+                                    echo"<option value = '$generos->id_generos'$isSelected > $generos->genero </option>";
                                 endwhile;
                                 
                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
                                 while($generos = mysqli_fetch_object($consultar)):      
                                 echo"<option value='$generos->id_genero'> $generos->genero</option>";
+                               
                                 endwhile
-                                                  
-                                                                          
                              ?>
                         </select>
                     </div>
