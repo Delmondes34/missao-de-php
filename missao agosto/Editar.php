@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilo/estilo.css">
+    <link rel="stylesheet" href="estilo/estiloDoEditar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <link href="pasta_para_conectar/conexão.php">
     <link href="pasta_para_conectar/Acao_conect.php">
@@ -36,23 +36,18 @@
                 </div>
                 <div class="col-md-4">
                     <div class="localNome">
-                        <label for="nome_da_historia" class="form-label">Digite o nome da historia</label>
+                        <label for="nome_da_historia" class="escrita">Digite o nome da historia</label>
                         <input type="text" class="form-control" id="nome_da_historia" aria-describedby="emailHelp" name="nome_da_historia" value="<?php echo $dados['nome_da_historia'];?>" require>
                     </div>
                     <div class="local">
-                        <label for="genero">Digite o genero</label>
+                        <label for="id_genero" class="escrita">Digite o genero</label>
                         <select name="id_genero" class="form-select" aria-label="Default select" id="id_genero" required>    
                             <?php
-                                $consultar = mysqli_query($conectar, "Select * FROM generos");
-                                echo"<option value='0' selected></option>";
-                                while ($generos = mysqli_fetch_object($consultar)) :
-                                    $isSelected = $generos->id_genero == $dados['id_genero'] ? "selected" : "";                     
-                                    echo"<option value = '$generos->id_generos'$isSelected > $generos->genero </option>";
-                                endwhile;
-                                
+                               echo"<option value='0' selected></option>";
                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
-                                while($generos = mysqli_fetch_object($consultar)):      
-                                echo"<option value='$generos->id_genero'> $generos->genero</option>";
+                                while($generos = mysqli_fetch_object($consultar)):
+                                    $isSelected = $generos->id_genero == $dados['id_genero'] ? "selected" : "";
+                                    echo"<option value = '$generos->id_genero' $isSelected> $generos->genero</option>";
                                
                                 endwhile
                              ?>
@@ -61,7 +56,7 @@
                 </div>
                 <div class="local">
 
-                    <label for="historia" class="form-label"> Comece a digitar a Sinopse</label>
+                    <label for="historia" class="escrita"> Comece a digitar a Sinopse</label>
                     <textarea class="form-control" id="historia" rows="4" name="historia" value="<?php echo $dados['historia'];?>"required><?php echo $dados['historia'];?></textarea>
                 </div>
                     <br>  

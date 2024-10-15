@@ -8,14 +8,14 @@ body{
 
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(#324001,#AFBF36);
+    background-image: linear-gradient(#324001,#AFBF36) ;
 
 }
 .universal{
 
     align-items: center;
     justify-content: center;
-    height: 200px; 
+    height:800px;
 
 
 }
@@ -25,7 +25,7 @@ body{
     justify-content: center;
     border: 1px solid ;
     text-align: center;
-    height: 450px;
+    height: 540px;
     width: 500px;
     background-image: linear-gradient(#324001,#AFBF36);
     position: absolute;
@@ -37,15 +37,17 @@ body{
     color: rgb(0, 0, 0); 
 
 }
-.form-select{
-
-    width: 98%;
-    height: 200px;
-    text-align: center;
+#nome_da_historia{
     align-items: center;
-    padding: 15px;
-    align-content: center;
-    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+    width: 480px;
+}
+#id_genero{
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 480px;
 }
 .escrita{
 
@@ -54,69 +56,10 @@ body{
     padding: 10px;
     align-content: center;
     font-size: 28px;
-    
-}
-.voltar{
-
-    top: 30%;
-
-}
-#id_genero{
-
-    padding: auto;
-    height: auto;
     width: 480px;
-
-}
-#bot{
-
-    padding: auto;
-
-}
-.esr{
-
-    height: 30px;
-    width: 30px;
-    top: 50%;
-    left: auto;
-
-}
-.corpo{
-
-    align-items: center;
-    justify-content: center;
-    height: 200px; 
-    margin: 400px;
-
-}
-#nome{
-
-    padding: auto;
-    height: auto;
-    width: 400px;
     
 }
-#caixaEscrever{
-
+#historia{ 
     align-items: center;
-    justify-content: center;
-    border: 1px solid ;
     text-align: center;
-    height: 550px;
-    width: 500px;
-    background-image: linear-gradient(#324001,#AFBF36);
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 20px;
-    color: rgb(0, 0, 0); 
-
-}
-table{
-
-    height: 600px;
-    width: 500px;
-    
 }
