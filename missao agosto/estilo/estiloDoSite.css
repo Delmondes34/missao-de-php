@@ -44,22 +44,8 @@ body{
     align-content: center;
     font-size: 100px;
 }
-.escrita{
-    text-align: center;
-    align-items: center;
-    padding: 10px;
-    align-content: center;
-    font-size: 30px;
-    
-}
 .voltar{
     top: 30%;
-}
-#id_genero{
-    padding: auto;
-    height: auto;
-    width: 480px;
-
 }
 #bot{
 
@@ -81,22 +67,6 @@ body{
     padding: auto;
     height: auto;
     width: 400px;
-}
-#caixaEscrever{
-    align-items: center;
-    justify-content: center;
-    border: 1px solid ;
-    text-align: center;
-    height: 550px;
-    width: 500px;
-    background-image: linear-gradient(#324001,#AFBF36);
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 20px;
-    color: rgb(0, 0, 0); 
 }
 table{
     height: 30px;

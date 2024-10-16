@@ -47,8 +47,7 @@
                                $consultar=mysqli_query($conectar, "Select * FROM generos ");
                                 while($generos = mysqli_fetch_object($consultar)):
                                     $isSelected = $generos->id_genero == $dados['id_genero'] ? "selected" : "";
-                                    echo"<option value = '$generos->id_genero' $isSelected> $generos->genero</option>";
-                               
+                                    echo"<option value = '$generos->id_genero' $isSelected> $generos->genero</option>";                               
                                 endwhile
                              ?>
                         </select>
