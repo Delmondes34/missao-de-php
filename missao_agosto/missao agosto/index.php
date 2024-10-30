@@ -1,5 +1,5 @@
 <?php
- include_once 'pasta_para_conectar/Acao_conect.php';
+    Include 'pasta_para_conectar/conexao.php';
  ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -9,9 +9,45 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <link href="../estilo/estilo.css">
-    <link rel="stylesheet" href="../estilo/estilo.css">
+    <link rel="stylesheet" href="estilo/estiloDoSite.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        
+        </div>
+    </div>
+    </nav>
+
+
+
     <div class="universal">
         <div>
             <h1>Bem vindo ao POST</h1>
@@ -35,13 +71,12 @@
             <tbody >
                 <tr>
                     <?php 
-                        $sql = 'SELECT * FROM historias';
+                        $sql = 'SELECT historias.id, historias.nome_da_historia, generos.genero, historias.historia from historias INNER JOIN generos ON historias.id_genero=generos.id_genero ';
                         $result = mysqli_query($conectar , $sql);
-                        while($dados = mysqli_fetch_array($result)):
-                            
+                        while($dados = mysqli_fetch_array($result)):                            
                     ?>
                     <td><?php echo $dados['nome_da_historia'];?></td>
-                    <td><?php echo $dados['id_genero'];?></td>
+                    <td><?php echo $dados['genero'];?></td>
                     <td><?php echo $dados['historia'];?></td>
                     <td>
                     <a href="Editar.php?id=<?php echo $dados['id'];?>" class="btn btn-primary" href='#'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -62,7 +97,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                    Você realmente quer deletar essa historia do nosso catalogo
+                                    Você realmente quer deletar esse historia do nosso catalogo
                                     </div>
                                     <div class="modal-footer">
                                         

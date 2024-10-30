@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="container">
+    <div class="accordion">
+        <button class="accordionHeader"> 
+            Cheromium
+        </button> 
+        <div class="accordionBody">           
+        <label for="" class="escrita">Nome</label>
+        <input type="text" class="locais">
+        <label for="" class="escrita">Idade</label>
+        <input type="date" class="locais">
+        <label for="" class="escrita">Cidade</label>
+        <input type="text" class="locais">
+        <button class="bu">pesquisar</button>
+        </div>
+        
+    </div>
+</div>
+<script>
+    const accordion=document.querySelectorAll('.accordion');
+    accordion.forEach(accordion => {
+        accordion.addEventListener('click', ()=>{
+            const body = accordion.querySelector('.accordionBody');
+            body.classList.toggle('active');
+        })
+    })
+</script>
+</body>
+</html>

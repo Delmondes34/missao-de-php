@@ -1,0 +1,74 @@
+/* estilo login*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(#324001,#AFBF36);
+
+}
+.universal{
+    align-items: center;
+    justify-content: center;
+    height: 200px; 
+
+
+}
+.conteudoCaixa{
+
+    align-items: center;
+    justify-content: center;
+    border: 1px solid ;
+    text-align: center;
+    height: 450px;
+    width: 500px;
+    background-image: linear-gradient(#324001,#AFBF36);
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0); 
+
+}
+.form-select{
+    width: 98%;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    align-content: center;
+    font-size: 100px;
+}
+.voltar{
+    top: 30%;
+}
+#bot{
+
+    padding: auto;
+}
+.esr{
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: auto;
+}
+.corpo{
+    align-items: center;
+    justify-content: center;
+    height: 200px; 
+    margin: 400px;
+}
+#nome{
+    padding: auto;
+    height: auto;
+    width: 400px;
+}
+table{
+    height: 30px;
+    width: 40px;
+}
